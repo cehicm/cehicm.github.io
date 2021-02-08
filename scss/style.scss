@@ -1,0 +1,99 @@
+@import "fonts";
+@import "config";
+@import "utilities";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page_container {
+  display: grid;
+  background-color: $primary-black-color;
+
+  //   .menu_trigger {
+  //     hamburger icon
+  //   }
+
+  nav {
+    @include set-background-color($primary-black-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    ul {
+      display: flex;
+      list-style: none;
+    }
+    li {
+      padding: 15px;
+    }
+    a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    a {
+      color: $primary-white-color;
+      text-decoration: none;
+    }
+  }
+  .main_heading {
+    background-image: url(/cehicm.github.io/images/header-background-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $primary-white-color;
+    text-align: center;
+    height: 11vh;
+
+    h1 {
+      font-family: "Caveat", cursive;
+      font-size: 3rem;
+      padding: 0 20px;
+    }
+
+    &_slogan {
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+  }
+
+  .about_me {
+    color: $primary-white-color;
+    padding: 15px 15px;
+
+    &_text {
+      font-family: "Inconsolata", monospace;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      font-family: "Inconsolata", monospace;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+  }
+  .portfolio_section {
+    display: grid;
+
+    img {
+      width: 40vh;
+      height: 20vh;
+    }
+    .single_project {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin: 10px;
+      background-color: $primary-black-color;
+
+      .section_title {
+        text-align: center;
+        color: $primary-white-color;
+        font-family: "Inconsolata", monospace;
+      }
+    }
+  }
+}

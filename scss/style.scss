@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -16,6 +16,9 @@
   //     hamburger icon
   //   }
 
+  header {
+    margin: 0;
+  }
   nav {
     @include set-background-color($primary-black-color);
     display: flex;
@@ -82,6 +85,19 @@
       width: 100%;
       height: 32vh;
     }
+
+    .project_overlay {
+      background: rgba(63, 63, 63, 0.8);
+      text-align: center;
+      padding: 20px 0 203px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+    }
+    &:hover {
+      visibility: visible;
+      opacity: 1;
+    }
     .single_project {
       align-items: center;
       border: 1px solid rgb(201, 20, 119);
@@ -97,11 +113,18 @@
   }
 
   footer {
-    display: grid;
-
-    a {
-      text-decoration: none;
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-around;
+    i {
+      padding: 10px 20px;
       color: $primary-white-color;
     }
+  }
+
+  .footer_copy {
+    align-items: center;
+    color: $primary-white-color;
+    padding: 10px 0;
   }
 }

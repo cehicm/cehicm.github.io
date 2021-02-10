@@ -6,7 +6,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -14,6 +14,10 @@
   display: -ms-grid;
   display: grid;
   background-color: #202020;
+}
+
+.page_container header {
+  margin: 0;
 }
 
 .page_container nav {
@@ -98,6 +102,21 @@
   height: 32vh;
 }
 
+.page_container .portfolio_section .project_overlay {
+  background: rgba(63, 63, 63, 0.8);
+  text-align: center;
+  padding: 20px 0 203px 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.page_container .portfolio_section:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
 .page_container .portfolio_section .single_project {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -114,12 +133,24 @@
 }
 
 .page_container footer {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.page_container footer a {
-  text-decoration: none;
+.page_container footer i {
+  padding: 10px 20px;
   color: #fdfbfb;
+}
+
+.page_container .footer_copy {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fdfbfb;
+  padding: 10px 0;
 }
 /*# sourceMappingURL=style.css.map */

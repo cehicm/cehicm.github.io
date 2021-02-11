@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -55,7 +59,7 @@
 }
 
 .page_container .main_heading {
-  background-image: url(/cehicm.github.io/images/header-background-img.jpg);
+  background-image: url(/images/header-background-img.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -126,6 +130,19 @@
   font-size: 1.5rem;
 }
 
+.page_container .portfolio_section .portfolio_section_button {
+  font-family: "Inconsolata", monospace;
+  background-color: #fdfbfb;
+  padding: 20px 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.page_container .portfolio_section .portfolio_section_button:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
 .page_container .project_overlay {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -159,7 +176,7 @@
   margin: 0 70px;
 }
 
-footer {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,7 +185,7 @@ footer {
       justify-content: space-around;
 }
 
-footer i {
+.footer i {
   padding: 10px 20px;
   color: #fdfbfb;
 }

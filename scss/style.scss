@@ -2,6 +2,10 @@
 @import "config";
 @import "utilities";
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -42,7 +46,7 @@
     }
   }
   .main_heading {
-    background-image: url(/cehicm.github.io/images/header-background-img.jpg);
+    background-image: url(/images/header-background-img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -107,6 +111,17 @@
 
       // lighten
     }
+    .portfolio_section_button {
+      font-family: "Inconsolata", monospace;
+      background-color: $primary-white-color;
+      padding: 20px 20px;
+      margin: 20px;
+      border-radius: 5px;
+
+      &:hover {
+        transform: scale(0.98);
+      }
+    }
   }
 
   .project_overlay {
@@ -139,7 +154,7 @@
   }
 }
 
-footer {
+.footer {
   display: flex;
   font-size: 2rem;
   justify-content: space-around;

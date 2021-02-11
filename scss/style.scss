@@ -154,6 +154,29 @@ html {
   }
 }
 
+// portfolio //
+
+.portfolio_display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  img {
+    width: 200px;
+    height: 200px;
+    grid-column-start: 1;
+    grid-row: 1;
+  }
+  h3 {
+    grid-column-end: 4;
+    text-align: center;
+    grid-column-start: 2;
+    grid-row: 1;
+  }
+  p {
+    grid-row: 2;
+  }
+}
+
 .footer {
   display: flex;
   font-size: 2rem;

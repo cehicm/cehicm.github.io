@@ -176,6 +176,38 @@ html {
   margin: 0 70px;
 }
 
+.portfolio_display {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+}
+
+.portfolio_display img {
+  width: 200px;
+  height: 200px;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.portfolio_display h3 {
+  grid-column-end: 4;
+  text-align: center;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.portfolio_display p {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;

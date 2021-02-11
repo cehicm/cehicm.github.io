@@ -13,7 +13,7 @@
 .page_container {
   display: -ms-grid;
   display: grid;
-  background-color: #202020;
+  background-color: #141414;
 }
 
 .page_container header {
@@ -21,8 +21,8 @@
 }
 
 .page_container nav {
-  background-color: #202020;
-  color: set-text-color(#202020);
+  background-color: #141414;
+  color: set-text-color(#141414);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,7 +102,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #c91477;
+  border: 10px solid #f1f1f1;
   margin-top: 40px;
   position: relative;
 }

@@ -52,17 +52,19 @@ html {
     background-repeat: no-repeat;
     color: $primary-white-color;
     text-align: center;
-    height: 11vh;
+    height: 30vh;
 
     h1 {
       font-family: "Caveat", cursive;
       font-size: 3rem;
       padding: 0 20px;
+      transform: translate(0%, 50%);
     }
 
     &_slogan {
       font-size: 1rem;
       text-transform: capitalize;
+      padding-top: 40px;
     }
   }
 
@@ -111,16 +113,19 @@ html {
 
       // lighten
     }
-    .portfolio_section_button {
-      font-family: "Inconsolata", monospace;
-      background-color: $primary-white-color;
-      padding: 20px 20px;
-      margin: 20px;
-      border-radius: 5px;
+  }
+  .tech_stack {
+    font-family: "Inconsolata", monospace;
+    background-color: $primary-white-color;
+    margin-top: 60px;
+    display: flex;
+    align-content: space-around;
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 5px;
 
-      &:hover {
-        transform: scale(0.98);
-      }
+    .fab {
+      font-size: 2.5rem;
     }
   }
 
@@ -136,7 +141,7 @@ html {
   }
 
   .individual_project:hover .image {
-    opacity: 0.3;
+    opacity: 0.2;
   }
 
   .individual_project:hover .project_overlay {
@@ -156,24 +161,46 @@ html {
 
 // portfolio //
 
+//   background-color: rosybrown;
+
 .portfolio_display {
+  color: $primary-white-color;
+  font-family: "Inconsolata", monospace;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 26%);
+
   img {
     width: 200px;
     height: 200px;
     grid-column-start: 1;
     grid-row: 1;
+    object-fit: contain;
   }
   h3 {
+    font-size: 1rem;
     grid-column-end: 4;
     text-align: center;
     grid-column-start: 2;
     grid-row: 1;
+    margin-top: 50px;
   }
   p {
+    font-size: 0.9rem;
+    text-align: center;
     grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin: 8px;
+    padding: 0 2px;
+    font-weight: 300;
+
+    span {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding-top: 10px;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -181,6 +208,7 @@ html {
   display: flex;
   font-size: 2rem;
   justify-content: space-around;
+  margin-top: 20px;
   i {
     padding: 10px 20px;
     color: $primary-white-color;
@@ -188,7 +216,6 @@ html {
 }
 
 .footer_copy {
-  align-items: center;
   color: $primary-white-color;
-  padding: 10px 0;
+  margin-top: 10px;
 }

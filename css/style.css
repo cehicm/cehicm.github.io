@@ -65,7 +65,7 @@ html {
   background-repeat: no-repeat;
   color: #fdfbfb;
   text-align: center;
-  height: 30vh;
+  height: 50vh;
 }
 
 .page_container .main_heading h1 {
@@ -162,14 +162,6 @@ html {
           transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.page_container .individual_project:hover .image {
-  opacity: 0.2;
-}
-
-.page_container .individual_project:hover .project_overlay {
-  opacity: 1;
 }
 
 .page_container .project_overlay_icons {

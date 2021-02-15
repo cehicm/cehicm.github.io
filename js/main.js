@@ -7,13 +7,6 @@ if (typeof jQuery === "undefined") {
   );
 }
 
-//fadeToggle
-$(function () {
-  $(".tech_stack i").on("mouseover", function () {
-    $(".tech_stack i").fadeTo("slow", 0.6);
-  });
-});
-
 // check if jquery is loaded //
 // window.onload = function () {
 //   if (window.jQuery) {

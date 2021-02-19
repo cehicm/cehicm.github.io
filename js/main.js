@@ -35,10 +35,10 @@ const textArray = [
   "Nananannaan|Batman",
 ];
 
-let speedForward = 150,
-  speedWait = 1000,
-  speedBetweenLines = 1000,
-  speedBackspace = 25;
+let speedForward = 220,
+  speedWait = 1500,
+  speedBetweenLines = 500,
+  speedBackspace = 55;
 
 const typeWriter = (id, ar) => {
   const element = $("#" + id),

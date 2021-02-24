@@ -30,7 +30,7 @@ let i = 0,
 const textArray = [
   " Aspiring front-end developer. | Based in Novi Sad",
   " Love coding| & learning new skills",
-  " Always looking for new challenges | & ways of writing better code",
+  " Looking for new challenges | & ways to improve my code",
   " NaNaNaNa| - Batman",
 ];
 

@@ -28,17 +28,16 @@ let i = 0,
   isParagraph = false;
 
 const textArray = [
-  " Some text | below",
-  "WDA|dada",
-  "dadada ?|cdcsa",
-  "cjjajda ?|vavaC",
-  "Nananannaan|Batman",
+  " Aspiring front-end developer. | Based in Novi Sad",
+  " Love coding| & learning new skills",
+  " Always looking for new challenges | & ways of writing better code",
+  " NaNaNaNa| - Batman",
 ];
 
-let speedForward = 220,
-  speedWait = 1500,
+let speedForward = 100,
+  speedWait = 500,
   speedBetweenLines = 500,
-  speedBackspace = 55;
+  speedBackspace = 25;
 
 const typeWriter = (id, ar) => {
   const element = $("#" + id),

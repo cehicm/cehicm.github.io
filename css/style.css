@@ -25,8 +25,8 @@ html {
 }
 
 .page_container nav {
-  background-color: #141414;
-  color: set-text-color(#141414);
+  background-color: #fdfbfb;
+  color: set-text-color(#fdfbfb);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +35,8 @@ html {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
 }
 
 .page_container nav ul {
@@ -54,32 +56,88 @@ html {
 }
 
 .page_container nav a {
-  color: #fdfbfb;
+  color: #141414;
   text-decoration: none;
+  font-size: 1rem;
 }
 
 .page_container .main_heading {
-  background-image: url(/images/header-background-img.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: #fdfbfb;
-  text-align: center;
-  height: 50vh;
+  text-align: left;
+  height: 5vh;
 }
 
 .page_container .main_heading h1 {
+  background-color: #0faa7b;
   font-family: "Caveat", cursive;
-  font-size: 3rem;
-  padding: 0 20px;
-  -webkit-transform: translate(0%, 50%);
-          transform: translate(0%, 50%);
+  text-decoration: underline;
+  font-size: 2rem;
+  padding: 10px 20px;
 }
 
-.page_container .main_heading_slogan {
-  font-size: 1rem;
-  text-transform: capitalize;
-  padding-top: 40px;
+.page_container .output {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: #fdfbfb;
+  height: 40vh;
+}
+
+.page_container .output h1 {
+  margin-top: 25%;
+  font-size: 2rem;
+}
+
+.page_container .cursor::after {
+  content: "";
+  display: inline-block;
+  margin-left: 3px;
+  background-color: #dadada;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.page_container h1.cursor::after {
+  height: 24px;
+  width: 13px;
+}
+
+.page_container p.cursor::after {
+  height: 13px;
+  width: 6px;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .page_container .about_me {
@@ -90,10 +148,11 @@ html {
 .page_container .about_me_text {
   font-family: "Inconsolata", monospace;
   text-align: left;
-  font-size: 0.9rem;
+  padding: 20px 5px;
 }
 
 .page_container .about_me h2 {
+  background-color: #0faa7b;
   font-family: "Inconsolata", monospace;
   font-size: 1.8rem;
   margin-bottom: 10px;
@@ -264,70 +323,5 @@ html {
 .footer_copy {
   color: #fdfbfb;
   margin-top: 10px;
-}
-
-.output {
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  color: #fdfbfb;
-  height: 54vh;
-}
-
-.output h1 {
-  margin-top: 15%;
-  font-size: 2rem;
-}
-
-.cursor::after {
-  content: "";
-  display: inline-block;
-  margin-left: 3px;
-  background-color: #dadada;
-  -webkit-animation-name: blink;
-          animation-name: blink;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-h1.cursor::after {
-  height: 24px;
-  width: 13px;
-}
-
-p.cursor::after {
-  height: 13px;
-  width: 6px;
-}
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 /*# sourceMappingURL=style.css.map */

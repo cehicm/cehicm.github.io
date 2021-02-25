@@ -259,13 +259,26 @@ body {
 
     .main_heading {
       h1 {
+        padding: 20px 20px;
         font-size: 1.6rem;
+      }
+    }
+    .output {
+      height: 60vh;
+      h1 {
+        margin-top: 20%;
+      }
+      p {
+        font-size: 1rem;
+        color: $green-background-color;
+        font-size: 1.2rem;
       }
     }
 
     .about_me {
       h2 {
         padding: 15px;
+        margin-bottom: 25px;
       }
       &_text {
         font-size: 1.2rem;
@@ -282,6 +295,15 @@ body {
 
     .tech_stack .fab {
       font-size: 3rem;
+    }
+
+    .footer {
+      i {
+        font-size: 2.3rem;
+      }
+      &_copy {
+        font-size: 1rem;
+      }
     }
   }
 }

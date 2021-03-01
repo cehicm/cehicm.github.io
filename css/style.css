@@ -4,10 +4,6 @@ html {
   overflow-x: hidden !important;
 }
 
-body {
-  background-color: #b1a7f1;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,7 +12,6 @@ body {
 }
 
 .page_container {
-  max-width: 1100px;
   margin: 0 auto;
   background-color: #141414;
 }
@@ -83,6 +78,10 @@ body {
 .page_container .output h1 {
   margin-top: 25%;
   font-size: 2rem;
+}
+
+.page_container .output p {
+  color: #f0f0ec;
 }
 
 .page_container .cursor::after {
@@ -163,15 +162,15 @@ body {
 
 .page_container .portfolio_section {
   margin-top: 40px;
-  display: -ms-grid;
-  display: grid;
 }
 
 .page_container .portfolio_section .individual_project {
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 10px solid #f1f1f1;
+  border: 10px solid #0faa7b;
   margin-bottom: 20px;
   position: relative;
 }
@@ -208,10 +207,6 @@ body {
           transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.page_container .portfolio_section .project_overlay .individual_project {
-  background-color: snow;
 }
 
 .page_container .portfolio_section .individual_project:hover .image,
@@ -260,6 +255,10 @@ body {
   text-align: center;
 }
 
+.footer a {
+  text-decoration: none;
+}
+
 .footer i {
   padding: 10px 20px;
   color: #fdfbfb;
@@ -295,11 +294,10 @@ body {
   }
   .page_container .output h1 {
     margin-top: 20%;
+    font-size: 2rem;
   }
   .page_container .output p {
-    font-size: 1rem;
-    color: #0faa7b;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .page_container .about_me h2 {
     padding: 15px;
@@ -319,6 +317,34 @@ body {
   }
   .page_container .footer_copy {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page_container .output h1 {
+    font-size: 3.3rem;
+  }
+  .page_container .output p {
+    font-size: 1.7rem;
+  }
+  .page_container .about_me p {
+    line-height: 37px;
+  }
+  .page_container .individual_project {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
+  .page_container .individual_project .project_overlay {
+    left: 25%;
+  }
+  .page_container .individual_project:nth-child(even) img {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+  .page_container .individual_project:nth-child(even) .project_overlay {
+    left: 75%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,10 +6,6 @@ html {
   overflow-x: hidden !important;
 }
 
-body {
-  background-color: rgb(177, 167, 241); //
-}
-
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -17,7 +13,6 @@ body {
 }
 
 .page_container {
-  max-width: 1100px;
   margin: 0 auto;
   background-color: $primary-black-color;
 
@@ -72,6 +67,10 @@ body {
     h1 {
       margin-top: 25%;
       font-size: 2rem;
+    }
+
+    p {
+      color: #f0f0ec;
     }
   }
 
@@ -140,11 +139,12 @@ body {
 
   .portfolio_section {
     margin-top: 40px;
-    display: grid;
 
     .individual_project {
+      display: grid;
+
       align-items: center;
-      border: 10px solid #f1f1f1;
+      border: 10px solid $green-background-color;
       margin-bottom: 20px;
       position: relative;
 
@@ -175,10 +175,6 @@ body {
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       text-align: center;
-
-      .individual_project {
-        background-color: snow;
-      }
     }
 
     .individual_project:hover .image,
@@ -218,12 +214,13 @@ body {
 }
 
 .footer {
-  // display: flex;
-  // justify-content: space-around;
-
   font-size: 1.6rem;
   margin-top: 20px;
   text-align: center;
+
+  a {
+    text-decoration: none;
+  }
 
   i {
     padding: 10px 20px;
@@ -267,11 +264,10 @@ body {
       height: 60vh;
       h1 {
         margin-top: 20%;
+        font-size: 2rem;
       }
       p {
-        font-size: 1rem;
-        color: $green-background-color;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -288,7 +284,7 @@ body {
     .portfolio_section {
       .individual_project {
         .section_title {
-          font-size: 1.4rem; //not happy with this!!!
+          font-size: 1.4rem;
         }
       }
     }
@@ -309,7 +305,34 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-}
+  .page_container {
+    .output {
+      h1 {
+        font-size: 3.3rem;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
+    .about_me p {
+      line-height: 37px;
+    }
 
-@media screen and (min-width: 1500px) {
+    .individual_project {
+      grid-template-columns: repeat(2, 50%);
+
+      .project_overlay {
+        left: 25%;
+      }
+      &:nth-child(even) {
+        img {
+          grid-row: 1;
+          grid-column-start: 2;
+        }
+        .project_overlay {
+          left: 75%;
+        }
+      }
+    }
+  }
 }

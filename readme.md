@@ -1,1 +1,1 @@
-View live: https://portfolio-repo.vercel.app/
+View live: https://cehicm.github.io/

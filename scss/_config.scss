@@ -1,0 +1,13 @@
+// colors
+$primary-white-color: #fdfbfb;
+$primary-black-color: #141414;
+$primary-gray-color: #808080;
+$green-background-color: #0faa7b;
+
+//pretty purple color #5C37BF
+//pretty blue color: #1C1A45
+
+@mixin set-background-color($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}

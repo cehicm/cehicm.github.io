@@ -1,0 +1,30 @@
+{
+  "name": "portfoliopage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cehicm/cehicm.github.io.git"
+  },
+  "author": "Marija Cehic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cehicm/cehicm.github.io/issues"
+  },
+  "homepage": "https://github.com/cehicm/cehicm.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "cssnano": "^4.1.10",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^2.0.1"
+  }
+}

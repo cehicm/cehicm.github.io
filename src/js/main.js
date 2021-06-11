@@ -39,8 +39,8 @@ let speedForward = 100,
   speedBetweenLines = 500,
   speedBackspace = 25;
 
-const typeWriter = (id, ar) => {
-  const element = $("#" + id),
+const typeWriter = (className, ar) => {
+  const element = $("." + className),
     aString = ar[a],
     eHeader = element.children("h1"),
     eParagraph = element.children("p");
@@ -53,7 +53,7 @@ const typeWriter = (id, ar) => {
         eParagraph.addClass("cursor");
         i++;
         setTimeout(() => {
-          typeWriter(id, ar);
+          typeWriter(className, ar);
         }, speedBetweenLines);
       } else {
         if (!isParagraph) {
@@ -63,13 +63,13 @@ const typeWriter = (id, ar) => {
         }
         i++;
         setTimeout(() => {
-          typeWriter(id, ar);
+          typeWriter(className, ar);
         }, speedForward);
       }
     } else if (i == aString.length) {
       isBackspacing = true;
       setTimeout(() => {
-        typeWriter(id, ar);
+        typeWriter(className, ar);
       }, speedWait);
     }
   } else {
@@ -84,7 +84,7 @@ const typeWriter = (id, ar) => {
         eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
       }
       setTimeout(() => {
-        typeWriter(id, ar);
+        typeWriter(className, ar);
       }, speedBackspace);
     } else {
       isBackspacing = false;
@@ -92,9 +92,9 @@ const typeWriter = (id, ar) => {
       isParagraph = false;
       a = (a + 1) % ar.length;
       setTimeout(() => {
-        typeWriter(id, ar);
+        typeWriter(className, ar);
       }, 50);
     }
   }
 };
-typeWriter("output", textArray);
+typeWriter("typewriter-output", textArray);

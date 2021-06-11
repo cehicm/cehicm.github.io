@@ -1,4 +1,5 @@
-@import "config";
+@use "./normalize";
+@import "config"; //change to use
 
 html {
   scroll-behavior: smooth;
@@ -18,51 +19,85 @@ html {
 
   header {
     margin: 0;
+
+    nav {
+      @include set-background-color($primary-white-color);
+      align-items: center;
+      justify-content: space-around;
+      font-family: "Courier New", Courier, monospace; //
+      font-weight: 600;
+
+      ul {
+        display: flex;
+        list-style: none;
+        li {
+          padding: 15px;
+        }
+      }
+
+      a {
+        color: $primary-black-color;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        @media screen and (min-width: 780px) {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
   }
-  nav {
-    @include set-background-color($primary-white-color);
-    align-items: center;
-    justify-content: space-around;
-    font-family: "Courier New", Courier, monospace; //
-    font-weight: 600;
-    ul {
-      display: flex;
-      list-style: none;
-    }
-    li {
-      padding: 15px;
-    }
-    a:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-    a {
-      color: $primary-black-color;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-  }
-  .main_heading {
+  .heading {
     color: $primary-white-color;
     text-align: left;
     height: 5vh;
 
-    h1 {
+    &_main {
       background-color: rgb(15, 170, 123);
       font-family: "Caveat", cursive;
       font-size: 1.2rem;
       padding: 10px 20px;
+
+      @media screen and (min-width: 780px) {
+        padding: 20px 20px;
+        font-size: 1.6rem;
+      }
     }
   }
 
   //typewriter styles //
 
-  .output {
+  .typewriter-output {
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     color: $primary-white-color;
     height: 45vh;
     padding: 0 10px;
+
+    @media screen and (min-width: 600px) {
+      height: 23vh;
+    }
+    h1 {
+      margin-top: 20%;
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      h1 {
+        font-size: 3.3rem;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
 
     h1 {
       margin-top: 25%;
@@ -116,31 +151,42 @@ html {
     color: $primary-white-color;
     padding: 8px;
 
-    &_text {
-      font-family: "Inconsolata", monospace;
-      text-align: left;
-      font-size: smaller;
-      padding: 15px 15px;
-      line-height: 20px;
-      font-size: 1rem;
-    }
-
-    h2 {
+    &_heading {
       background-color: $green-background-color;
       font-family: "Inconsolata", monospace;
       font-size: 1.8rem;
       text-transform: capitalize;
       margin-bottom: 10px;
       padding: 8px;
+
+      @media screen and(min-width:780px) {
+        padding: 15px;
+        margin-bottom: 25px;
+      }
+    }
+
+    &_text {
+      font-family: "Inconsolata", monospace;
+      text-align: left;
+      font-size: smaller;
+      padding: 15px 15px;
+      line-height: 20px;
+
+      @media screen and(min-width:780px) {
+        font-size: 1.2rem;
+      }
+
+      @media screen and (min-width: 1200px) {
+        line-height: 37px;
+      }
     }
   }
 
   // PORTFOLIO SECTION //
-
-  .portfolio_section {
+  .portfolio {
     margin-top: 40px;
 
-    .individual_project {
+    &_project {
       display: grid;
 
       align-items: center;
@@ -148,7 +194,7 @@ html {
       margin-bottom: 20px;
       position: relative;
 
-      .image {
+      &_image {
         width: 100%;
         height: auto;
         opacity: 1;
@@ -157,12 +203,16 @@ html {
         backface-visibility: hidden;
         object-fit: contain;
       }
-      .section_title {
+      &_title {
+        font-family: "Inconsolata", monospace;
+        font-size: 1rem;
         text-align: center;
         color: $primary-white-color;
-        font-family: "Inconsolata", monospace;
         padding: 15px;
-        font-size: 1rem;
+
+        @media screen and (min-width: 780px) {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -177,12 +227,12 @@ html {
       text-align: center;
     }
 
-    .individual_project:hover .image,
-    .individual_project:active {
+    .portfolio_project:hover .portfolio_project_image,
+    .portfolio_project:active {
       opacity: 0.2;
     }
 
-    .individual_project:hover .project_overlay {
+    .portfolio_project:hover .project_overlay {
       opacity: 1;
     }
 
@@ -196,6 +246,8 @@ html {
       }
     }
   }
+
+  //Footer section
   .tech_stack {
     padding: 20px 20px;
     margin-top: 50px;
@@ -205,16 +257,19 @@ html {
 
     .fab {
       font-size: 2.3rem;
+
+      @media screen and (min-width: 780px) {
+        font-size: 3rem;
+      }
       &:hover {
-        opacity: 0.9;
-        font-size: 2.1rem;
+        opacity: 0.6;
       }
     }
   }
 }
 
 .footer {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-top: 20px;
   text-align: center;
 
@@ -231,94 +286,29 @@ html {
     }
   }
   &_copy {
+    font-size: 1rem;
     color: $primary-white-color;
     margin-top: 10px;
     margin-bottom: 15px;
+
+    @media screen and (min-width: 780px) {
+      .footer {
+        i {
+          font-size: 2.3rem;
+        }
+        &_copy {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }
 
 // Responsive Styles //
 
-@media screen and (min-width: 780px) {
-  .page_container {
-    header {
-      margin: 0;
-    }
-    nav {
-      li {
-        padding: 20px;
-      }
-      a {
-        font-size: 1.3rem;
-        font-weight: 600;
-      }
-    }
-
-    .main_heading {
-      h1 {
-        padding: 20px 20px;
-        font-size: 1.6rem;
-      }
-    }
-    .output {
-      height: 60vh;
-      h1 {
-        margin-top: 20%;
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1.5rem;
-      }
-    }
-
-    .about_me {
-      h2 {
-        padding: 15px;
-        margin-bottom: 25px;
-      }
-      &_text {
-        font-size: 1.2rem;
-      }
-    }
-
-    .portfolio_section {
-      .individual_project {
-        .section_title {
-          font-size: 1.4rem;
-        }
-      }
-    }
-
-    .tech_stack .fab {
-      font-size: 3rem;
-    }
-
-    .footer {
-      i {
-        font-size: 2.3rem;
-      }
-      &_copy {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .page_container {
-    .output {
-      h1 {
-        font-size: 3.3rem;
-      }
-      p {
-        font-size: 1.7rem;
-      }
-    }
-    .about_me p {
-      line-height: 37px;
-    }
-
-    .individual_project {
+    .portfolio_project {
       grid-template-columns: repeat(2, 50%);
 
       .project_overlay {

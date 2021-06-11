@@ -1,0 +1,293 @@
+.body,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page_container {
+  margin: 0 auto;
+  background-color: #141414;
+}
+.page_container header {
+  margin: 0;
+}
+.page_container header nav {
+  background-color: #fdfbfb;
+  color: set-text-color(#fdfbfb);
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.page_container header nav ul {
+  display: flex;
+  list-style: none;
+}
+.page_container header nav ul li {
+  padding: 15px;
+}
+.page_container header nav a {
+  color: #141414;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 780px) {
+  .page_container header nav a {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+.page_container header nav a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.page_container .heading {
+  color: #fdfbfb;
+  text-align: left;
+  height: 5vh;
+}
+.page_container .heading_main {
+  background-color: #0faa7b;
+  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 780px) {
+  .page_container .heading_main {
+    padding: 20px 20px;
+    font-size: 1.6rem;
+  }
+}
+.page_container .typewriter-output {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: #fdfbfb;
+  height: 45vh;
+  padding: 0 10px;
+}
+@media screen and (min-width: 600px) {
+  .page_container .typewriter-output {
+    height: 23vh;
+  }
+}
+.page_container .typewriter-output h1 {
+  margin-top: 20%;
+  font-size: 1.7rem;
+}
+.page_container .typewriter-output p {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .page_container .typewriter-output h1 {
+    font-size: 3.3rem;
+  }
+  .page_container .typewriter-output p {
+    font-size: 1.7rem;
+  }
+}
+.page_container .typewriter-output h1 {
+  margin-top: 25%;
+  font-size: 2rem;
+}
+.page_container .typewriter-output p {
+  color: #f0f0ec;
+}
+.page_container .cursor::after {
+  content: "";
+  display: inline-block;
+  margin-left: 3px;
+  background-color: #fdf;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+.page_container h1.cursor::after {
+  height: 24px;
+  width: 13px;
+}
+.page_container p.cursor::after {
+  height: 13px;
+  width: 6px;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.page_container .about_me {
+  color: #fdfbfb;
+  padding: 8px;
+}
+.page_container .about_me_heading {
+  background-color: #0faa7b;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+@media screen and (min-width: 780px) {
+  .page_container .about_me_heading {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+}
+.page_container .about_me_text {
+  font-family: "Inconsolata", monospace;
+  text-align: left;
+  font-size: smaller;
+  padding: 15px 15px;
+  line-height: 20px;
+}
+@media screen and (min-width: 780px) {
+  .page_container .about_me_text {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page_container .about_me_text {
+    line-height: 37px;
+  }
+}
+.page_container .portfolio {
+  margin-top: 40px;
+}
+.page_container .portfolio_project {
+  display: grid;
+  align-items: center;
+  border: 10px solid #0faa7b;
+  margin-bottom: 20px;
+  position: relative;
+}
+.page_container .portfolio_project_image {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  object-fit: contain;
+}
+.page_container .portfolio_project_title {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  text-align: center;
+  color: #fdfbfb;
+  padding: 15px;
+}
+@media screen and (min-width: 780px) {
+  .page_container .portfolio_project_title {
+    font-size: 1.4rem;
+  }
+}
+.page_container .portfolio .project_overlay {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.page_container .portfolio .portfolio_project:hover .portfolio_project_image,
+.page_container .portfolio .portfolio_project:active {
+  opacity: 0.2;
+}
+.page_container .portfolio .portfolio_project:hover .project_overlay {
+  opacity: 1;
+}
+.page_container .portfolio .project_overlay_icons {
+  font-size: 2.5rem;
+  padding: 16px 32px;
+  display: flex;
+}
+.page_container .portfolio .project_overlay_icons i {
+  margin: 0 50px;
+}
+.page_container .tech_stack {
+  padding: 20px 20px;
+  margin-top: 50px;
+  display: flex;
+  border-radius: 5px;
+  background-color: #0faa7b;
+}
+.page_container .tech_stack .fab {
+  font-size: 2.3rem;
+}
+@media screen and (min-width: 780px) {
+  .page_container .tech_stack .fab {
+    font-size: 3rem;
+  }
+}
+.page_container .tech_stack .fab:hover {
+  opacity: 0.6;
+}
+
+.footer {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer i {
+  padding: 10px 20px;
+  color: #fdfbfb;
+}
+.footer i:hover {
+  color: #0faa7b;
+}
+.footer_copy {
+  font-size: 1rem;
+  color: #fdfbfb;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 780px) {
+  .footer_copy .footer i {
+    font-size: 2.3rem;
+  }
+  .footer_copy .footer_copy {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page_container .portfolio_project {
+    grid-template-columns: repeat(2, 50%);
+  }
+  .page_container .portfolio_project .project_overlay {
+    left: 25%;
+  }
+  .page_container .portfolio_project:nth-child(even) img {
+    grid-row: 1;
+    grid-column-start: 2;
+  }
+  .page_container .portfolio_project:nth-child(even) .project_overlay {
+    left: 75%;
+  }
+}

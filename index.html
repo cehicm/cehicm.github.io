@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Courier+Prime&family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link
@@ -22,29 +27,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>Marija Ćehić</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/dist/css/style.min.css" />
   </head>
   <body>
     <div class="page_container">
-      <header id="header">
-        <nav id="nav">
+      <header class="header">
+        <nav class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#portfolio_scroll">Portfolio</a></li>
             <li><a href="#contact_scroll">Contact</a></li>
           </ul>
         </nav>
-        <div class="main_heading">
-          <h1 class="">Marija Ćehić</h1>
-        </div>
-
-        <div class="output" id="output">
-          <h1 class="cursor"></h1>
-          <p></p>
+        <div class="heading">
+          <h1 class="heading_main">Marija Ćehić</h1>
         </div>
       </header>
+      <div class="typewriter-output">
+        <h1 class="cursor"></h1>
+        <p></p>
+      </div>
       <div class="about_me">
-        <h2>about me</h2>
+        <h2 class="about_me_heading">about me</h2>
         <div class="about_me_text">
           <p>
             I love deconstructing different concepts & learning how different
@@ -57,14 +61,14 @@
         </div>
       </div>
 
-      <section class="portfolio_section" id="portfolio_scroll">
-        <div class="individual_project">
+      <section class="portfolio" id="portfolio_scroll">
+        <div class="portfolio_project">
           <img
-            src="/images/desktop-design.jpg"
-            class="image"
+            src="/src/images/desktop-design.jpg"
+            class="portfolio_project_image"
             alt="First project cover image"
           />
-          <h3 class="section_title">Image to Code</h3>
+          <h3 class="portfolio_project_title">Image to Code</h3>
 
           <div class="project_overlay">
             <div class="project_overlay_icons">
@@ -80,13 +84,13 @@
           </div>
         </div>
 
-        <div class="individual_project">
+        <div class="portfolio_project">
           <img
-            src="/images/desktop-design.jpg"
-            class="image"
+            src="/src/images/desktop-design.jpg"
+            class="portfolio_project_image"
             alt="Second project cover image"
           />
-          <h3 class="section_title">Project 2</h3>
+          <h3 class="portfolio_project_title">Project 2</h3>
 
           <div class="project_overlay">
             <div class="project_overlay_icons">
@@ -115,6 +119,6 @@
       </footer>
     </div>
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/dist/js/main.js"></script>
   </body>
 </html>

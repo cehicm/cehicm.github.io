@@ -98,3 +98,18 @@ const typeWriter = (className, ar) => {
   }
 };
 typeWriter("typewriter-output", textArray);
+
+//Change based on screen size
+// $(document).ready(function(){
+//   if(window.innerWidth < 1340){
+//     $('.btn-group').addClass('backup-btn-group').removeClass('btn-group');
+//   }
+// });
+
+// $(window).resize(function(){
+//   if(window.innerWidth < 1340){
+//     $('.btn-group').addClass('backup-btn-group').removeClass('btn-group');
+//   }else{
+//     $('.backup-btn-group').addClass('btn-group').removeClass('backup-btn-group');
+//   }
+// });

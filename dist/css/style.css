@@ -212,37 +212,53 @@ html {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-.page_container .portfolio .portfolio_project:hover .portfolio_project_image,
-.page_container .portfolio .portfolio_project:active {
+@media screen and (min-width: 1200px) {
+  .page_container .portfolio .page_container .portfolio_project {
+    grid-template-columns: repeat(2, 50%);
+  }
+  .page_container .portfolio .page_container .portfolio_project .project_overlay {
+    left: 25%;
+  }
+  .page_container .portfolio .page_container .portfolio_project:nth-child(even) img {
+    grid-row: 1;
+    grid-column-start: 2;
+  }
+  .page_container .portfolio .page_container .portfolio_project:nth-child(even) .project_overlay {
+    left: 75%;
+  }
+}
+.page_container .portfolio_project:hover .portfolio_project_image,
+.page_container .portfolio_project:active {
   opacity: 0.2;
 }
-.page_container .portfolio .portfolio_project:hover .project_overlay {
+.page_container .portfolio_project:hover .project_overlay {
   opacity: 1;
 }
-.page_container .portfolio .project_overlay_icons {
+.page_container .project_overlay_icons {
   font-size: 2.5rem;
   padding: 16px 32px;
   display: flex;
 }
-.page_container .portfolio .project_overlay_icons i {
+.page_container .project_overlay_icons i {
   margin: 0 50px;
 }
-.page_container .tech_stack {
+
+.tech_stack {
   padding: 20px 20px;
   margin-top: 50px;
   display: flex;
   border-radius: 5px;
   background-color: #0faa7b;
 }
-.page_container .tech_stack .fab {
+.tech_stack .fab {
   font-size: 2.3rem;
 }
 @media screen and (min-width: 780px) {
-  .page_container .tech_stack .fab {
+  .tech_stack .fab {
     font-size: 3rem;
   }
 }
-.page_container .tech_stack .fab:hover {
+.tech_stack .fab:hover {
   opacity: 0.6;
 }
 
@@ -273,21 +289,5 @@ html {
   }
   .footer_copy .footer_copy {
     font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .page_container .portfolio_project {
-    grid-template-columns: repeat(2, 50%);
-  }
-  .page_container .portfolio_project .project_overlay {
-    left: 25%;
-  }
-  .page_container .portfolio_project:nth-child(even) img {
-    grid-row: 1;
-    grid-column-start: 2;
-  }
-  .page_container .portfolio_project:nth-child(even) .project_overlay {
-    left: 75%;
   }
 }

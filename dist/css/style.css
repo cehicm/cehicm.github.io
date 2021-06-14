@@ -26,7 +26,6 @@ html {
 }
 .page_container header nav {
   background-color: #fdfbfb;
-  color: set-text-color(#fdfbfb);
   align-items: center;
   justify-content: space-around;
   font-family: "Courier New", Courier, monospace;
@@ -50,6 +49,11 @@ html {
     font-weight: 600;
   }
 }
+@media screen and (min-width: 1024px) {
+  .page_container header nav a {
+    font-size: 2.4rem;
+  }
+}
 .page_container header nav a:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -71,6 +75,11 @@ html {
     font-size: 1.6rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .page_container .heading_main {
+    font-size: 2.2rem;
+  }
+}
 .page_container .typewriter-output {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
@@ -78,34 +87,41 @@ html {
   height: 45vh;
   padding: 0 10px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .page_container .typewriter-output {
     height: 23vh;
   }
 }
-.page_container .typewriter-output h1 {
-  margin-top: 20%;
-  font-size: 1.7rem;
-}
-.page_container .typewriter-output p {
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 1200px) {
-  .page_container .typewriter-output h1 {
-    font-size: 3.3rem;
-  }
-  .page_container .typewriter-output p {
-    font-size: 1.7rem;
+@media screen and (min-width: 768px) {
+  .page_container .typewriter-output {
+    height: 43vh;
   }
 }
 .page_container .typewriter-output h1 {
   margin-top: 25%;
   font-size: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .page_container .typewriter-output h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .page_container .typewriter-output h1 {
+    font-size: 3.3rem;
+  }
+}
 .page_container .typewriter-output p {
+  font-size: 1.5rem;
   color: #f0f0ec;
 }
-.page_container .cursor::after {
+@media screen and (min-width: 1024px) {
+  .page_container .typewriter-output p {
+    font-size: 1.7rem;
+  }
+}
+
+.cursor::after {
   content: "";
   display: inline-block;
   margin-left: 3px;
@@ -114,14 +130,17 @@ html {
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
-.page_container h1.cursor::after {
+
+h1.cursor::after {
   height: 24px;
   width: 13px;
 }
-.page_container p.cursor::after {
+
+p.cursor::after {
   height: 13px;
   width: 6px;
 }
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -136,11 +155,11 @@ html {
     opacity: 0;
   }
 }
-.page_container .about_me {
+.about_me {
   color: #fdfbfb;
   padding: 8px;
 }
-.page_container .about_me_heading {
+.about_me_heading {
   background-color: #0faa7b;
   font-family: "Inconsolata", monospace;
   font-size: 1.8rem;
@@ -148,40 +167,43 @@ html {
   margin-bottom: 10px;
   padding: 8px;
 }
-@media screen and (min-width: 780px) {
-  .page_container .about_me_heading {
+@media screen and (min-width: 768px) {
+  .about_me_heading {
+    font-size: 3rem;
     padding: 15px;
     margin-bottom: 25px;
   }
 }
-.page_container .about_me_text {
+.about_me_text {
   font-family: "Inconsolata", monospace;
   text-align: left;
-  font-size: smaller;
   padding: 15px 15px;
   line-height: 20px;
+  font-size: 1rem;
 }
-@media screen and (min-width: 780px) {
-  .page_container .about_me_text {
-    font-size: 1.2rem;
+@media screen and (min-width: 768px) {
+  .about_me_text {
+    font-size: 2rem;
+    line-height: 40px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .page_container .about_me_text {
+@media screen and (min-width: 1024px) {
+  .about_me_text {
     line-height: 37px;
   }
 }
-.page_container .portfolio {
+
+.portfolio {
   margin-top: 40px;
 }
-.page_container .portfolio_project {
+.portfolio_project {
   display: grid;
   align-items: center;
   border: 10px solid #0faa7b;
   margin-bottom: 20px;
   position: relative;
 }
-.page_container .portfolio_project_image {
+.portfolio_project_image {
   width: 100%;
   height: auto;
   opacity: 1;
@@ -190,59 +212,101 @@ html {
   backface-visibility: hidden;
   object-fit: contain;
 }
-.page_container .portfolio_project_title {
+.portfolio_project_title {
   font-family: "Inconsolata", monospace;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   color: #fdfbfb;
   padding: 15px;
 }
-@media screen and (min-width: 780px) {
-  .page_container .portfolio_project_title {
-    font-size: 1.4rem;
+@media screen and (min-width: 768px) {
+  .portfolio_project_title {
+    font-size: 3rem;
   }
 }
-.page_container .portfolio .project_overlay {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+.portfolio_project_text {
+  font-family: "Inconsolata", monospace;
+  color: #fdfbfb;
   text-align: center;
+  padding: 9px;
 }
-@media screen and (min-width: 1200px) {
-  .page_container .portfolio .page_container .portfolio_project {
-    grid-template-columns: repeat(2, 50%);
+@media screen and (min-width: 768px) {
+  .portfolio_project_text {
+    font-size: 1.5rem;
   }
-  .page_container .portfolio .page_container .portfolio_project .project_overlay {
-    left: 25%;
-  }
-  .page_container .portfolio .page_container .portfolio_project:nth-child(even) img {
-    grid-row: 1;
+}
+@media screen and (min-width: 1024px) {
+  .portfolio_project_text {
     grid-column-start: 2;
   }
-  .page_container .portfolio .page_container .portfolio_project:nth-child(even) .project_overlay {
-    left: 75%;
-  }
 }
-.page_container .portfolio_project:hover .portfolio_project_image,
-.page_container .portfolio_project:active {
-  opacity: 0.2;
-}
-.page_container .portfolio_project:hover .project_overlay {
+.portfolio_project .project_overlay {
   opacity: 1;
 }
-.page_container .project_overlay_icons {
-  font-size: 2.5rem;
+@media screen and (min-width: 1024px) {
+  .portfolio_project .project_overlay {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+.portfolio .portfolio_project:hover .portfolio_project_image,
+.portfolio .portfolio_project:active {
+  opacity: 0.2;
+}
+.portfolio .portfolio_project:hover .project_overlay {
+  opacity: 1;
+}
+.portfolio .project_overlay_icons {
+  font-size: 1.5rem;
   padding: 16px 32px;
   display: flex;
 }
-.page_container .project_overlay_icons i {
+@media screen and (min-width: 768px) {
+  .portfolio .project_overlay_icons {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .portfolio .project_overlay_icons {
+    font-size: 2.5rem;
+  }
+}
+.portfolio .project_overlay_icons i {
   margin: 0 50px;
+  color: #fdfbfb;
+}
+.portfolio .project_overlay_icons i:hover {
+  color: #5c37bf;
 }
 
+@media screen and (min-width: 1024px) {
+  .page_container .portfolio_project {
+    grid-template-columns: repeat(2, 50%);
+    margin-bottom: 70px;
+  }
+  .page_container .portfolio_project .project_overlay {
+    left: 25%;
+  }
+  .page_container .portfolio_project img {
+    grid-row: 1/span 2;
+  }
+  .page_container .portfolio_project:nth-child(even) p {
+    grid-column: 1/span 1;
+  }
+  .page_container .portfolio_project:nth-child(even) img {
+    grid-row: 0;
+    grid-column: 2/span 1;
+  }
+  .page_container .portfolio_project:nth-child(even) .project_overlay {
+    left: 75%;
+  }
+}
 .tech_stack {
   padding: 20px 20px;
   margin-top: 50px;
@@ -253,9 +317,9 @@ html {
 .tech_stack .fab {
   font-size: 2.3rem;
 }
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   .tech_stack .fab {
-    font-size: 3rem;
+    font-size: 3.3rem;
   }
 }
 .tech_stack .fab:hover {
@@ -274,6 +338,11 @@ html {
   padding: 10px 20px;
   color: #fdfbfb;
 }
+@media screen and (min-width: 768px) {
+  .footer i {
+    font-size: 3rem;
+  }
+}
 .footer i:hover {
   color: #0faa7b;
 }
@@ -283,11 +352,8 @@ html {
   margin-top: 10px;
   margin-bottom: 15px;
 }
-@media screen and (min-width: 780px) {
-  .footer_copy .footer i {
-    font-size: 2.3rem;
-  }
-  .footer_copy .footer_copy {
-    font-size: 1rem;
+@media screen and (min-width: 768px) {
+  .footer_copy {
+    font-size: 2rem;
   }
 }

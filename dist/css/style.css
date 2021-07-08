@@ -169,7 +169,7 @@ p.cursor::after {
 }
 @media screen and (min-width: 768px) {
   .about_me_heading {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 15px;
     margin-bottom: 25px;
   }
@@ -183,7 +183,7 @@ p.cursor::after {
 }
 @media screen and (min-width: 768px) {
   .about_me_text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 40px;
   }
 }
@@ -221,7 +221,7 @@ p.cursor::after {
 }
 @media screen and (min-width: 768px) {
   .portfolio_project_title {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 }
 .portfolio_project_text {
